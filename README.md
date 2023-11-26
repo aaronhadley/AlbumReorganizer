@@ -28,7 +28,7 @@ To set up AlbumReorganizer, follow these steps:
 
 1. **Clone the Repository**:
    ```bash
-   git clone [URL to AlbumReorganizer repository]
+   git clone https://github.com/aaronhadley/AlbumReorganizer.git
    cd AlbumReorganizer
    ```
 

@@ -20,9 +20,9 @@ from folder_processing import processFolder, temporalGrouping
 from PIL.ExifTags import TAGS
 from gui import ChooseBest
 
-localPath = os.path.normpath('E:/OldForReorg')
-destinationPath = 'E:/OrgTest'
-undoPath = 'E:/OrgTest/2009'
+localPath = os.path.normpath('E:/OldPictures')
+destinationPath = 'E:/NewPictures'
+undoPath = 'E:/NewPictures/2009'
 
 
 # _TAGS_r = dict(((v, k) for k, v in TAGS.items()))
@@ -70,8 +70,8 @@ def main(step, threshold):
             for group in grouping:
                 if group[0:5] == 'group':
                     # 0,0 will be top left, negative goes up and lef, positive goes down and right
-                    x = -50
-                    y = -1440
+                    x = 0
+                    y = 0
                     endprocess = ChooseBest(os.path.join(destinationPath, spath, group), x, y)
                     if endprocess:
                         break
@@ -112,5 +112,5 @@ if __name__ == "__main__":
     # step = ('Warning: This program will rename all your files and move them around without saving the original state.'
     #         'Do not run it unless you know what you are doing. If possible, make a copy first.'
     #         'When ready, uncomment and run for each step incrementally, checking your progress as you go')
-    threshold = 30
+    threshold = 5
     main(step=step, threshold=threshold)
